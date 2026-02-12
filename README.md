@@ -68,6 +68,7 @@ This project demonstrates sound relational design using primary and foreign keys
 ## Technologies Used
 - PostgreSQL
 - SQL
+- Bash Scripting
 
 ---
 

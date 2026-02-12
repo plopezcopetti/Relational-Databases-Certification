@@ -5,6 +5,44 @@ Each project focuses on applying PostgreSQL and SQL concepts, including relation
 
 ---
 
+## Practice Projects
+
+### 1. Building a Student Database P1
+
+A PostgreSQL relational database that models a university academic system, including students, majors, and courses.  
+This project demonstrates structured schema design, normalization principles, sequence handling, and automated data population using Bash scripting.
+
+#### Database Structure
+
+- **students**: Stores student records with first name, last name, associated major, and GPA  
+- **majors**: Stores academic majors  
+- **courses**: Stores available courses  
+- **majors_courses**: Junction table implementing the many-to-many relationship between majors and courses  
+
+#### Key Concepts Demonstrated
+
+- One-to-many relationship (majors → students)  
+- Many-to-many relationship (majors ↔ courses via junction table)  
+- Primary and foreign key constraints  
+- Explicit sequence creation and ownership  
+- Default values using `nextval()`  
+- Handling NULL values for undeclared majors  
+- Schema normalization and referential integrity  
+
+#### Data Automation
+
+The project includes a Bash script (`insert_data.sh`) that:
+
+- Connects to PostgreSQL using `psql`
+- Reads data from CSV files
+- Checks for existing records before inserting
+- Dynamically retrieves foreign keys
+- Populates relational tables programmatically
+
+This demonstrates integration between SQL and shell scripting for automated database population.
+
+---
+
 ## Certification Projects
 
 ### 1. Universe Database (Celestial Bodies Database)

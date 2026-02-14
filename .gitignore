@@ -1,0 +1,12 @@
+# PostgreSQL
+*.log
+*.pid
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

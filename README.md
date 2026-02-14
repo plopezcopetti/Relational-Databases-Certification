@@ -1,6 +1,6 @@
-# Relational Database Certification Projects
+# freeCodeCamp – Relational Databases Certification
 
-This repository contains projects completed as part of the **freeCodeCamp Relational Database Certification**.  
+This repository contains projects completed as part of the **freeCodeCamp Relational Databases Certification**.  
 Each project focuses on applying PostgreSQL and SQL concepts, including relational modeling, constraints, and data integrity.
 
 ---

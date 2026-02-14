@@ -41,6 +41,45 @@ The project includes a Bash script (`insert_data.sh`) that:
 
 This demonstrates integration between SQL and shell scripting for automated database population.
 
+### 2. Build a Kitty Ipsum Translator
+
+A Bash-based text processing project that transforms themed “Kitty Ipsum” content into a modified output using Unix command-line tools.  
+This project demonstrates pattern matching with regular expressions, stream editing with `sed`, text filtering with `grep`, file comparison using `diff`, and basic shell scripting for automated text transformation.
+
+#### Structure
+
+- `kitty_ipsum_1.txt` / `kitty_ipsum_2.txt` – Original source text files  
+- `doggy_ipsum_1.txt` / `doggy_ipsum_2.txt` – Transformed output files  
+- `translate.sh` – Bash script that processes input files and applies multiple substitution rules  
+- `script.sh` – Supporting Bash logic for input handling and execution  
+- `kitty_info.txt` – Generated metadata file with pattern counts and line references  
+- `stdout.txt` / `stderr.txt` – Output logs for validation and debugging  
+
+#### Key Concepts Mastered
+
+- Using `grep` for pattern detection and line-number extraction  
+- Writing and modifying regular expressions (character classes, quantifiers, capture groups)  
+- Performing chained substitutions with `sed`  
+- Applying global replacements using the `g` flag  
+- Redirecting output with `>` and `>>`  
+- Piping commands to build processing pipelines  
+- Counting matches with `wc -l`  
+- Extracting and transforming line numbers via capture groups  
+- Comparing files with `diff --color`  
+- Writing executable Bash scripts with positional parameters (`$1`)  
+
+#### Data Automation
+
+The project automates text transformation by:
+
+- Accepting an input file as a command-line argument  
+- Applying multiple sequential regex-based substitutions  
+- Generating transformed output files programmatically  
+- Capturing pattern occurrence statistics  
+- Producing structured output logs for verification  
+
+This workflow simulates real-world command-line data processing pipelines, where raw text is filtered, transformed, and validated through chained Unix utilities.  
+
 ---
 
 ## Certification Projects

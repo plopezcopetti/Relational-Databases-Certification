@@ -3,6 +3,13 @@
 This repository contains projects completed as part of the **freeCodeCamp Relational Databases Certification**.  
 Each project focuses on applying PostgreSQL and SQL concepts, including relational modeling, constraints, and data integrity.
 
+## Table of Contents
+
+- [Practice Projects](#practice-projects)
+- [Certification Projects](#certification-projects)
+- [Technologies Used](#technologies-used)
+- [Certification](#certification)
+
 ---
 
 ## Practice Projects
@@ -80,6 +87,45 @@ The project automates text transformation by:
 
 This workflow simulates real-world command-line data processing pipelines, where raw text is filtered, transformed, and validated through chained Unix utilities.  
 
+### 3. Build a Bike Rental Shop
+
+A PostgreSQL-backed command-line application that simulates a bike rental management system.  
+This project demonstrates relational database design, table relationships, sequence management, conditional logic in Bash, and real-time data interaction using SQL queries executed from a shell script.
+
+#### Structure
+
+- `bikes_full.sql` – PostgreSQL database dump containing schema, tables, and sequences  
+- `bike-shop.sh` – Bash application that interacts with the database  
+- `bikes` table – Stores bike inventory, type, size, and availability status  
+- `customers` table – Stores customer records identified by phone number  
+- `rentals` table – Tracks rental transactions and links customers to bikes  
+
+#### Key Concepts Mastered
+
+- Designing relational database schemas with primary keys and foreign keys  
+- Creating and managing sequences for auto-incremented IDs  
+- Writing `CREATE TABLE`, `ALTER TABLE`, and `INSERT` statements  
+- Querying data with `SELECT` and filtering with `WHERE` clauses  
+- Updating records using `UPDATE` to manage inventory availability  
+- Handling user input validation in Bash (numeric checks with regex)  
+- Executing SQL queries inside shell scripts using `psql`  
+- Capturing query results into Bash variables  
+- Implementing conditional logic based on query results  
+- Managing database-driven workflows from the command line 
+
+#### Data Automation
+
+The project automates rental operations by:
+
+- Displaying dynamically queried bike inventory  
+- Validating user input before executing database logic  
+- Checking bike availability through SQL queries  
+- Creating new customer records when needed  
+- Recording rental transactions in the database  
+- Updating bike availability status in real time  
+
+This workflow simulates a transactional system where a Bash application acts as the interface layer and PostgreSQL manages persistent data storage. The project reinforces how command-line applications can integrate directly with relational databases to create structured, stateful systems.
+
 ---
 
 ## Certification Projects
@@ -110,12 +156,6 @@ This project demonstrates sound relational design using primary and foreign keys
 - Bash Scripting
 
 ---
-
-## How to Run
-```bash
-psql -U <username> < universe.sql
-psql -U <username> universe
-```
 
 ## Certification
 Part of the [freeCodeCamp Relational Database Certification](https://www.freecodecamp.org/learn/relational-databases-v9/)

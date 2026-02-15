@@ -1,7 +1,17 @@
 # freeCodeCamp – Relational Databases Certification
 
 This repository contains projects completed as part of the **freeCodeCamp Relational Databases Certification**.  
-Each project focuses on applying PostgreSQL and SQL concepts, including relational modeling, constraints, and data integrity.
+Each project demonstrates practical experience in relational database design, data modeling, and structured data querying using PostgreSQL.
+
+The projects included reflect skills relevant to data analysis workflows, including:
+
+- Data normalization and schema design
+- Relational data modeling
+- Writing analytical SQL queries (JOINs, aggregations, filtering)
+- Automating structured data ingestion using Bash scripting
+- Extracting insights from structured datasets
+
+These projects simulate real-world database environments where structured data must be stored, queried, and analyzed efficiently.
 
 ## Table of Contents
 
@@ -278,12 +288,61 @@ If not, it returns a controlled error message.
 
 This project reinforces relational modeling, JOIN logic, conditional branching in shell scripting, and clean command-line interface design powered by PostgreSQL.
 
+### 5. Build a Number Guessing Game
+
+A PostgreSQL-backed command-line number guessing game that tracks user statistics across sessions.  
+This project demonstrates database-driven state management, conditional logic in Bash, and persistent user data tracking.
+
+#### Structure
+
+- `number_guess.sql` – PostgreSQL database dump containing schema and constraints  
+- `number_guess.sh` – Bash script implementing the interactive guessing game  
+- `users` table – Stores player usernames  
+- `games` table – Stores game attempts, guesses, and links to users  
+
+#### Key Concepts Demonstrated
+
+- One-to-many relationships (users → games)  
+- Foreign key constraints for relational integrity  
+- Auto-incremented primary keys using `SERIAL`  
+- Random number generation in Bash  
+- Loop control and input validation  
+- Numeric validation using regex  
+- Executing SQL queries inside shell scripts  
+- Tracking aggregate statistics (best game, total games played)  
+- Conditional output based on stored data  
+
+#### Application Workflow
+
+The script:
+
+- Prompts the user for a username  
+- Checks if the user already exists in the database  
+- Retrieves stored statistics for returning players  
+- Generates a random secret number  
+- Validates numeric guesses  
+- Counts attempts dynamically  
+- Stores game results in the database  
+- Displays personalized statistics after completion  
+
+This project reinforces how relational databases can persist user state across sessions while a shell-based interface handles interaction logic and control flow.
+
 ---
 
 ## Technologies Used
 - PostgreSQL
-- SQL
 - Bash Scripting
+
+## Analytical Skills Demonstrated
+
+- Complex JOIN operations across normalized datasets
+- Aggregation functions (SUM, COUNT, AVG, MAX)
+- Data filtering and transformation
+- Conditional querying
+- Basic dataset automation pipelines
+- Schema normalization for analytical consistency
+- Data integrity enforcement through constraints
+- Multi-table relational querying
 
 ---
 

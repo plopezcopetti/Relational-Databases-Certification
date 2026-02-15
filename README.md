@@ -148,6 +148,49 @@ This project demonstrates sound relational design using primary and foreign keys
 - Data types and NOT NULL / UNIQUE constraints
 - Schema organization and normalization
 
+### 2. Build a World Cup Database
+
+A PostgreSQL relational database that models FIFA World Cup tournament data from 2014-2018, including teams, games, rounds, and scores. This project demonstrates structured schema design, normalization principles, foreign key relationships, and automated data population using Bash scripting.
+
+#### Structure
+- `worldcup.sql` – PostgreSQL database dump containing schema, tables, and sequences
+- `insert_data.sh` – Bash script that populates the database from CSV data
+- `queries.sh` – Bash script that performs analytical queries on the database
+- `games.csv` – Source data file containing World Cup game records from 2014-2018
+- `teams` table – Stores unique team names with auto-generated team IDs
+- `games` table – Stores game records including year, round, winner, opponent, and goals scored
+
+#### Key Concepts Demonstrated
+- One-to-many relationships (teams → games as winners/opponents)
+- Primary and foreign key constraints
+- Explicit sequence creation and ownership with `SERIAL` type
+- Handling duplicate entries with `UNIQUE` constraints
+- Schema normalization and referential integrity
+- CSV data parsing and conditional insertion logic
+
+#### Data Automation
+The project includes a Bash script (`insert_data.sh`) that:
+
+- Connects to PostgreSQL using `psql`
+- Reads data from CSV files
+- Checks for existing records before inserting
+- Dynamically retrieves foreign keys
+- Populates relational tables programmatically
+
+This demonstrates integration between SQL and shell scripting for automated database population.
+
+#### Query Analysis
+
+The project includes a queries script (`queries.sh`) that performs analytical queries:
+
+- Aggregation functions (SUM, AVG, COUNT, MAX)
+- JOIN operations across related tables
+- Filtering with WHERE clauses
+- Pattern matching with LIKE operator
+- Data analysis for tournament statistics
+
+This showcases SQL querying skills for extracting meaningful insights from relational data.
+
 ---
 
 ## Technologies Used

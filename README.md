@@ -191,6 +191,93 @@ The project includes a queries script (`queries.sh`) that performs analytical qu
 
 This showcases SQL querying skills for extracting meaningful insights from relational data.
 
+### 3. Build a Salon Appointment Scheduler
+
+A PostgreSQL-backed command-line appointment scheduling system for a salon.  
+This project demonstrates relational database design, transactional data handling, conditional logic in Bash, and dynamic SQL execution through a shell-based interface.
+
+#### Structure
+
+- `salon.sql` – PostgreSQL database dump containing schema, tables, and sequences  
+- `salon.sh` – Bash application that manages appointment scheduling  
+- `services` table – Stores available salon services  
+- `customers` table – Stores customer records identified by phone number  
+- `appointments` table – Stores scheduled appointments linking customers and services  
+
+#### Key Concepts Demonstrated
+
+- Designing normalized relational schemas  
+- One-to-many relationships (customers → appointments)  
+- Foreign key constraints to enforce referential integrity  
+- Auto-incremented primary keys using sequences / `SERIAL`  
+- Data validation and conditional branching in Bash  
+- Executing parameterized SQL queries via `psql`  
+- Capturing SQL query results into Bash variables  
+- Handling user input and dynamic workflow control  
+- Preventing duplicate customer entries  
+- Real-time insertion and retrieval of relational data  
+
+#### Application Workflow
+
+The project automates appointment scheduling by:
+
+- Displaying dynamically queried service options  
+- Validating user input before executing database logic  
+- Checking for existing customers by phone number  
+- Creating new customer records when necessary  
+- Recording appointments with service ID, customer ID, and scheduled time  
+- Confirming bookings using dynamically generated output  
+
+This project simulates a real-world transactional system where a Bash application serves as the interface layer and PostgreSQL handles persistent data management. It reinforces how relational databases can power stateful applications through structured constraints and controlled data flow.
+
+### 4. Build a Periodic Table Database
+
+A PostgreSQL-backed command-line application that queries chemical element data from a normalized relational database.  
+This project demonstrates multi-table JOIN operations, conditional input handling in Bash, and dynamic SQL execution based on user-provided arguments.
+
+#### Structure
+
+- `periodic_table.sql` – PostgreSQL database dump containing schema, tables, and constraints  
+- `element.sh` – Bash script that queries element data based on atomic number, symbol, or name  
+- `elements` table – Stores atomic number, symbol, and element name  
+- `properties` table – Stores physical properties such as atomic mass and temperature points  
+- `types` table – Stores element classification (e.g., metal, nonmetal, metalloid)  
+
+#### Key Concepts Demonstrated
+
+- Multi-table JOIN queries across normalized relational structures  
+- One-to-one relationships between `elements` and `properties`  
+- Foreign key constraints linking `properties` to `types`  
+- Argument validation in Bash using conditional expressions  
+- Regex-based numeric input detection (`^[0-9]+$`)  
+- Dynamic SQL query construction based on input type  
+- Parsing query results using `IFS="|"` and `read`  
+- Handling empty query results gracefully  
+- Structured formatted output generation  
+
+#### Application Workflow
+
+The script accepts a single argument and determines whether the input corresponds to:
+
+- An atomic number  
+- A chemical symbol  
+- An element name  
+
+Based on the detected input type, it executes the appropriate SQL query using JOIN operations to retrieve:
+
+- Atomic number  
+- Symbol  
+- Name  
+- Element classification  
+- Atomic mass  
+- Melting point  
+- Boiling point  
+
+If the element exists, the script formats and displays the information in a structured sentence.  
+If not, it returns a controlled error message.
+
+This project reinforces relational modeling, JOIN logic, conditional branching in shell scripting, and clean command-line interface design powered by PostgreSQL.
+
 ---
 
 ## Technologies Used
